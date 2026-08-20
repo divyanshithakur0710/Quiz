@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Application</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            background-color: #198754;
+            color: white;
+            font-size: 40px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 25px;
+            font-weight: bold;
+            margin: 30px 25px 20px;
+        }
+
+        label {
+            font-size: 20px;
+            margin-left: 5px;
+        }
+
+        span {
+            font-weight: bold;
+            margin-left: 25px;
+            margin-right: 5px;
+            font-size: 20px;
+        }
+
+        input {
+            cursor: pointer;
+        }
+
+
+        /* Hide all messages */
+
+        #correct1,
+        #incorrect1,
+        #correct2,
+        #incorrect2,
+        #correct3,
+        #incorrect3,
+        #correct4,
+        #incorrect4 {
+            display: none;
+        }
+
+
+        /* Question 1 */
+
+        #modi:checked ~ #correct1 {
+            display: block;
+        }
+
+        #rahul:checked ~ #incorrect1,
+        #dhoni:checked ~ #incorrect1,
+        #virat:checked ~ #incorrect1 {
+            display: block;
+        }
+
+
+        /* Question 2 */
+
+        #html:checked ~ #correct2 {
+            display: block;
+        }
+
+        #css:checked ~ #incorrect2,
+        #java:checked ~ #incorrect2,
+        #python:checked ~ #incorrect2 {
+            display: block;
+        }
+
+
+        /* Question 3 */
+
+        #color:checked ~ #correct3 {
+            display: block;
+        }
+
+        #background:checked ~ #incorrect3,
+        #font:checked ~ #incorrect3,
+        #text:checked ~ #incorrect3 {
+            display: block;
+        }
+
+
+        /* Question 4 */
+
+        #p-tag:checked ~ #correct4 {
+            display: block;
+        }
+
+        #h1-tag:checked ~ #incorrect4,
+        #br-tag:checked ~ #incorrect4,
+        #div-tag:checked ~ #incorrect4 {
+            display: block;
+        }
+
+
+        /* Correct message */
+
+        h3[id^="correct"] {
+            margin: 20px 25px;
+            padding: 15px;
+            background-color: #198754;
+            color: white;
+        }
+
+
+        /* Incorrect message */
+
+        h3[id^="incorrect"] {
+            margin: 20px 25px;
+            padding: 15px;
+            background-color: #dc3545;
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>Quiz Application</h1>
+
+
+    <!-- QUESTION 1 -->
+
+    <p>1. Who is the Prime Minister of India?</p>
+
+    <span>A.</span>
+    <input type="radio" id="rahul" name="q1">
+    <label for="rahul">Rahul Gandhi</label>
+    <br>
+
+    <span>B.</span>
+    <input type="radio" id="modi" name="q1">
+    <label for="modi">Narendra Modi</label>
+    <br>
+
+    <span>C.</span>
+    <input type="radio" id="dhoni" name="q1">
+    <label for="dhoni">MS Dhoni</label>
+    <br>
+
+    <span>D.</span>
+    <input type="radio" id="virat" name="q1">
+    <label for="virat">Virat Kohli</label>
+
+    <h3 id="correct1">Correct!</h3>
+    <h3 id="incorrect1">Incorrect! Try Again!</h3>
+
+
+    <!-- QUESTION 2 -->
+
+    <p>2. Which language is used to create the structure of a webpage?</p>
+
+    <span>A.</span>
+    <input type="radio" id="css" name="q2">
+    <label for="css">CSS</label>
+    <br>
+
+    <span>B.</span>
+    <input type="radio" id="html" name="q2">
+    <label for="html">HTML</label>
+    <br>
+
+    <span>C.</span>
+    <input type="radio" id="java" name="q2">
+    <label for="java">Java</label>
+    <br>
+
+    <span>D.</span>
+    <input type="radio" id="python" name="q2">
+    <label for="python">Python</label>
+
+    <h3 id="correct2">Correct!</h3>
+    <h3 id="incorrect2">Incorrect! Try Again!</h3>
+
+
+    <!-- QUESTION 3 -->
+
+    <p>3. Which CSS property is used to change text color?</p>
+
+    <span>A.</span>
+    <input type="radio" id="background" name="q3">
+    <label for="background">background-color</label>
+    <br>
+
+    <span>B.</span>
+    <input type="radio" id="color" name="q3">
+    <label for="color">color</label>
+    <br>
+
+    <span>C.</span>
+    <input type="radio" id="font" name="q3">
+    <label for="font">font-size</label>
+    <br>
+
+    <span>D.</span>
+    <input type="radio" id="text" name="q3">
+    <label for="text">text-style</label>
+
+    <h3 id="correct3">Correct!</h3>
+    <h3 id="incorrect3">Incorrect! Try Again!</h3>
+
+
+    <!-- QUESTION 4 -->
+
+    <p>4. Which HTML tag is used to create a paragraph?</p>
+
+    <span>A.</span>
+    <input type="radio" id="h1-tag" name="q4">
+    <label for="h1-tag">&lt;h1&gt;</label>
+    <br>
+
+    <span>B.</span>
+    <input type="radio" id="br-tag" name="q4">
+    <label for="br-tag">&lt;br&gt;</label>
+    <br>
+
+    <span>C.</span>
+    <input type="radio" id="p-tag" name="q4">
+    <label for="p-tag">&lt;p&gt;</label>
+    <br>
+
+    <span>D.</span>
+    <input type="radio" id="div-tag" name="q4">
+    <label for="div-tag">&lt;div&gt;</label>
+
+    <h3 id="correct4">Correct!</h3>
+    <h3 id="incorrect4">Incorrect! Try Again!</h3>
+
+</body>
+
+</html>
